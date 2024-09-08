@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs</title>
+    <style>
+        * { box-sizing: border-box; }
+        .slideshow-container { max-width: 1000px; position: relative; margin: auto; }
+        .mySlides { display: none; }
+        .prev, .next { cursor: pointer; position: absolute; top: 50%; width: auto; margin-top: -22px; padding: 16px; color: white; font-weight: bold; font-size: 18px; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none; }
+        .next { right: 0; border-radius: 3px 0 0 3px; }
+        .prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+        .text { color: #f2f2f2; font-size: 15px; padding: 8px 12px; position: absolute; bottom: 8px; width: calc(100% - 16px); text-align: center; background-color: rgba(0, 0, 0, 0.5); border-radius: 5px; }
+        .numbertext { color: #f2f2f2; font-size: 12px; padding: 8px 12px; position: absolute; top: 0; }
+        .dot { cursor: pointer; height: 15px; width: 15px; margin: 0 2px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; }
+        .active, .dot:hover { background-color: #717171; }
+        .fade { animation-name: fade; animation-duration: 1.5s; }
+        @keyframes fade { from { opacity: .4 } to { opacity: 1 } }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 10</div>
+            <img src="./pic/j1.jpg" style="width:100%">
+            <div class="text">Aerospace engineers design, develop, and test aircraft, spacecraft, and related systems and equipment. They work on improving performance, safety, and efficiency.</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 10</div>
+            <img src="./pic/j2.jpg" style="width:100%">
+            <div class="text">Astrophysicists study the physical properties and behavior of celestial objects and phenomena. They use theoretical models and observational data to understand the universe.</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 10</div>
+            <img src="./pic/j3.webp" style="width:100%">
+            <div class="text">Planetary scientists study planets, moons, and other bodies in our solar system and beyond. They investigate their composition, geology, and potential for life.</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 10</div>
+            <img src="./pic/j4.jpg" style="width:100%">
+            <div class="text">Satellite systems engineers design and manage satellite systems and their components. They ensure that satellites operate correctly and meet mission objectives.</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 10</div>
+            <img src="./pic/j5.jpg" style="width:100%">
+            <div class="text">Space mission planners develop plans and strategies for space missions, including spacecraft trajectories, mission timelines, and resource allocation.</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">6 / 10</div>
+            <img src="./pic/j6.jpg" style="width:100%">
+            <div class="text">Rocket propulsion engineers design and test propulsion systems for rockets and spacecraft. They focus on optimizing performance and ensuring reliability.</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">7 / 10</div>
+            <img src="./pic/j7.webp" style="width:100%">
+            <div class="text">Space robotics engineers develop robotic systems used in space exploration, such as rovers and robotic arms. They work on automation, control systems, and integration with spacecraft.</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">8 / 10</div>
+            <img src="./pic/j8.jpg" style="width:100%">
+            <div class="text">Space scientists conduct research on various aspects of space, including cosmic radiation, solar phenomena, and the interstellar medium. They often work with space missions and observatories.</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">9 / 10</div>
+            <img src="./pic/j9.jpg" style="width:100%">
+            <div class="text">Astronauts are trained to travel and work in space. They conduct scientific experiments, perform spacewalks, and operate spacecraft.</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">10 / 10</div>
+            <img src="./pic/spaceBG.jpg" style="width:100%">
+            <div class="text">Space operations specialists manage the day-to-day operations of spacecraft and space missions. They handle communication with spacecraft, monitor systems, and coordinate with ground teams.</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+</html>

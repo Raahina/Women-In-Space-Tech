@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Spacecraft Safety</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: url('spaceBG.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            padding: 3em;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            background: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        header {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #ff69b4, #ff69b4);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header .home-button {
+            background-color: #ff69b4;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        header .home-button:hover {
+            background-color: #ff1493;
+        }
+        .title p {
+            color: #0d71fc;
+            font-size: 1.3em;
+            letter-spacing: 2px;
+        }
+        .timeline {
+            margin: 5em auto;
+            max-width: 34.15em;
+        }
+        .checkpoint {
+            max-width: 34em;
+            padding: 2em 0;
+            position: relative;
+        }
+        .checkpoint div {
+            border: 2px solid #888;
+            border-radius: 1em;
+            padding: 1.2em;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .checkpoint p {
+            line-height: 1.6;
+            color: #ccc;
+        }
+        .checkpoint:nth-child(odd) {
+            border-left: 3px solid #888;
+            padding-left: 3em;
+            transform: translateX(17em);
+        }
+        .checkpoint:nth-child(even) {
+            border-right: 3px solid #888;
+            padding-right: 3em;
+            transform: translateX(-1em);
+        }
+        .checkpoint:nth-child(odd)::before,
+        .checkpoint:nth-child(even)::before {
+            content: '';
+            background: #888;
+            width: 3em;
+            height: 3px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .checkpoint:nth-child(odd)::before {
+            left: 0;
+        }
+        .checkpoint:nth-child(even)::before {
+            right: 0;
+        }
+        .checkpoint:nth-child(odd) div::before,
+        .checkpoint:nth-child(even) div::before {
+            content: '';
+            background: #fff;
+            box-shadow: 0 0 0.5em #0d71fc;
+            width: 0.8em;
+            height: 0.8em;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+        }
+        .checkpoint:nth-child(odd) div::before {
+            left: -0.5em;
+        }
+        .checkpoint:nth-child(even) div::before {
+            right: -0.5em;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 2em;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .button:active {
+            background-color: #004080;
+            transform: scale(0.95);
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <button class="home-button" onclick="location.href='Women_In_Space_Tech.html'">Home</button>
+        <h1>Exploring Spacecraft Safety</h1>
+    </header>
+    <div class="title">
+        <p>Building a Safer Future: Key Readings to Understand Space Missions</p>
+    </div>
+    <div class="timeline">
+        <div class="checkpoint">
+            <div>
+                <h2>1.1 Life Support System</h2>
+                <p>Function: Maintains oxygen levels, pressure, and removes carbon dioxide. Importance: Critical for the survival of astronauts in space.</p>
+            </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+                <h2>1.2 Propulsion System</h2>
+                <p>Function: Provides thrust to maneuver the spacecraft. Importance: Essential for trajectory adjustments and orbital changes.</p>
+            </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+                <h2>1.3 Navigation System</h2>
+                <p>Function: Calculates and adjusts spacecraft position and trajectory. Importance: Ensures the spacecraft follows its intended path and reaches its destination.</p>
+            </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+                <h2>1.4 Communication System</h2>
+                <p>Function: Maintains contact between the spacecraft and ground control. Importance: Vital for transmitting data, receiving commands, and ensuring mission coordination.</p>
+            </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+                <h2>1.5 Power Supply System</h2>
+                <p>Function: Generates and distributes electrical power to all spacecraft systems. Importance: Powers all operational systems and instruments.</p>
+            </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+                <h2>1.6 Thermal Control System</h2>
+                <p>Function: Regulates the spacecraft's temperature by managing heat dissipation and insulation. Importance: Prevents overheating or freezing of spacecraft components.</p>
+            </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+                <h2>1.7 Science Instruments</h2>
+                <p>Function: Conducts experiments and collects data about space environments and celestial bodies. Importance: Provides valuable scientific information and insights.</p>
+            </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+                <h2>1.8 Structural Framework</h2>
+                <p>Function: Supports and protects the spacecraft's components and crew. Importance: Ensures the spacecraft's integrity and safety during the mission.</p>
+            </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+                <h2>2.1 Radiation Exposure</h2>
+                <p>Risk: Spacecraft and astronauts are exposed to high levels of cosmic radiation. Safety Measure: Use radiation shielding materials and limit exposure time.</p>
+            </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+                <h2>2.2 Micrometeoroid and Orbital Debris (MMOD)</h2>
+                <p>Risk: Spacecraft can be hit by micrometeoroids or debris, causing damage. Safety Measure: Implement shielding and track debris to avoid collisions.</p>
+            </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+                <h2>2.3 Equipment Failure</h2>
+                <p>Risk: Systems and components may fail, impacting spacecraft operations. Safety Measure: Design redundant systems and perform regular maintenance checks.</p>
+            </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+                <h2>2.4 Thermal Extremes</h2>
+                <p>Risk: Spacecraft can experience extreme temperatures in space. Safety Measure: Use thermal control systems to regulate temperatures.</p>
+            </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+                <h2>2.5 Loss of Communication</h2>
+                <p>Risk: Communication with ground control may be lost. Safety Measure: Use multiple communication channels and backup systems.</p>
+            </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+                <h2>2.6 Microgravity Effects</h2>
+                <p>Risk: Extended exposure to microgravity can affect astronauts’ health. Safety Measure: Implement exercise routines and medical monitoring.</p>
+            </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+                <h2>2.7 Fire Hazard</h2>
+                <p>Risk: Fire in the confined environment of a spacecraft is a severe risk. Safety Measure: Use fire detection and suppression systems, and have emergency protocols in place.</p>
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <a href="Quiz.html" class="button">Start Quiz</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Object Classifier Game</title>
+    <link rel="stylesheet" href="game_styles.css">
+</head>
+<body>
+    <header>
+        <h1>Space Object Classifier Game</h1>
+        <p>Welcome to the Space Object Classifier Game! This game helps classify space objects as either stars or asteroids. By participating, you contribute to a machine learning model that can identify these objects and determine if they are safe to be around Earth. Your input is valuable for advancing space exploration and technology.</p>
+    </header>
+    <div id="game-container">
+        <img id="space-object" src="" alt="Space Object">
+        <div id="classification-buttons">
+            <button id="star-button">Star</button>
+            <button id="asteroid-button">Asteroid</button>
+        </div>
+    </div>
+    <div id="data-container">
+        <h2>Collected Data</h2>
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Classification</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="game_script.js"></script>
+</body>
+</html>
